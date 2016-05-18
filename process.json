@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "keystone",
+      "script": "keystone.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 3000
+      }
+    }
+  ]
+}
