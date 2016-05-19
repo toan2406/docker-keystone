@@ -12,8 +12,9 @@ Quick Start
 -------------------
 
 * Launch MongoDB container
+* The ```-v /datadir:/data/db``` part of the command mounts the ```/datadir``` directory from the underlying host system as ```/data/db``` inside the container, where MongoDB by default will write its data files.
 ```bash
-docker run -v "$(pwd)":/data --name mongo-service -d mongo mongod --smallfiles
+docker run -v /datadir:/data/db --name mongo-service -d mongo mongod --smallfiles
 ```
 * Launch Keystone
 ```bash
